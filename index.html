@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where the Waves Met the Shore — The Nielson-Hopkins Heritage</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F5F0E8;
+  --forest: #2D4A3E;
+  --navy: #1B3A4B;
+  --charcoal: #2C2C2C;
+  --gold: #B8965A;
+  --gold-light: #D4B87A;
+  --cream-dark: #E8E0D0;
+  --paper: #FAF7F2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════════════════════════════════════
+   BOOK COVER
+   ═══════════════════════════════════════════ */
+
+.book-cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(170deg, var(--navy) 0%, #0F2A38 40%, var(--forest) 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.book-cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23B8965A' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+.book-cover .ornament-top,
+.book-cover .ornament-bottom {
+  position: relative;
+  z-index: 1;
+  color: var(--gold);
+  font-size: 2rem;
+  letter-spacing: 0.5em;
+  opacity: 0.6;
+}
+
+.book-cover h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  margin: 1.5rem 0 0.5rem;
+  line-height: 1.2;
+}
+
+.book-cover .subtitle {
+  position: relative;
+  z-index: 1;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--gold-light);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.book-cover .subtitle-line {
+  position: relative;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(245, 240, 232, 0.6);
+  margin-bottom: 2rem;
+}
+
+.book-cover .family-names {
+  position: relative;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(245, 240, 232, 0.7);
+  line-height: 2;
+  margin-top: 1rem;
+}
+
+.gold-rule {
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.5rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+.gold-rule.thick {
+  height: 2px;
+  width: 300px;
+}
+
+/* ═══════════════════════════════════════════
+   TABLE OF CONTENTS
+   ═══════════════════════════════════════════ */
+
+.toc {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.toc h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--forest);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.toc-section {
+  margin-bottom: 2.5rem;
+}
+
+.toc-section h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gold);
+}
+
+.toc-entry {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--charcoal);
+  transition: color 0.2s;
+}
+
+.toc-entry:hover { color: var(--forest); }
+
+.toc-entry .chapter-num {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  min-width: 2.5rem;
+}
+
+.toc-entry .chapter-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.toc-entry .dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--cream-dark);
+  margin: 0 0.5rem;
+  min-width: 2rem;
+}
+
+/* ═══════════════════════════════════════════
+   VOLUME DIVIDERS
+   ═══════════════════════════════════════════ */
+
+.volume-divider {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--paper);
+  border-top: 3px solid var(--navy);
+  border-bottom: 3px solid var(--navy);
+  position: relative;
+}
+
+.volume-divider::before,
+.volume-divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.volume-divider::before { top: 2rem; }
+.volume-divider::after { bottom: 2rem; }
+
+.volume-divider .vol-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.volume-divider h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--forest);
+  margin-bottom: 0.5rem;
+}
+
+.volume-divider .vol-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--charcoal);
+  opacity: 0.7;
+  max-width: 500px;
+}
+
+/* ═══════════════════════════════════════════
+   FAMILY TREE DIAGRAMS
+   ═══════════════════════════════════════════ */
+
+.family-tree-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.family-tree-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--forest);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tree-container {
+  background: var(--paper);
+  border: 1px solid var(--cream-dark);
+  border-radius: 4px;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.tree-person {
+  display: inline-block;
+  background: white;
+  border: 2px solid var(--navy);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.tree-person .name {
+  font-weight: 600;
+  color: var(--navy);
+  display: block;
+}
+
+.tree-person .dates {
+  font-size: 0.7rem;
+  color: var(--gold);
+}
+
+.tree-person .origin {
+  font-size: 0.65rem;
+  color: #888;
+  font-style: italic;
+}
+
+.tree-person.patriarch {
+  border-color: var(--forest);
+  background: rgba(45, 74, 62, 0.05);
+}
+
+.tree-person.matriarch {
+  border-color: var(--gold);
+  background: rgba(184, 150, 90, 0.05);
+}
+
+.tree-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.tree-connector {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0.25rem 0;
+}
+
+.tree-marriage {
+  text-align: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin: 0.5rem 0;
+}
+
+/* ═══════════════════════════════════════════
+   CHAPTER PAGES
+   ═══════════════════════════════════════════ */
+
+.chapter {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+  position: relative;
+}
+
+.chapter-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gold);
+}
+
+.chapter-number {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.chapter-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  color: var(--forest);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.chapter-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--charcoal);
+  opacity: 0.6;
+}
+
+/* Drop caps */
+.chapter .body-text > p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-right: 0.15em;
+  padding-top: 0.05em;
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.body-text p {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ═══════════════════════════════════════════
+   BLOCKQUOTES / PULL QUOTES
+   ═══════════════════════════════════════════ */
+
+.letter-excerpt {
+  background: var(--paper);
+  border-left: 3px solid var(--gold);
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  font-style: italic;
+  position: relative;
+}
+
+.letter-excerpt::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  line-height: 1;
+}
+
+.letter-excerpt p {
+  text-align: left !important;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+}
+
+.letter-excerpt p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  background: var(--paper);
+  border-left: 3px solid var(--gold);
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  font-style: italic;
+  position: relative;
+}
+
+blockquote::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  line-height: 1;
+}
+
+blockquote p {
+  text-align: left !important;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════
+   IMAGES & CAPTIONS
+   ═══════════════════════════════════════════ */
+
+.photo-frame {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.photo-frame img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid var(--navy);
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.photo-frame.half img {
+  max-width: 60%;
+}
+
+.photo-frame.small img {
+  max-width: 40%;
+}
+
+.photo-caption {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.photo-caption strong {
+  color: var(--charcoal);
+}
+
+figure.historical-image {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+figure.historical-image img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid var(--navy);
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+figure.historical-image figcaption {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+  padding: 0 1rem;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION BREAKS
+   ═══════════════════════════════════════════ */
+
+.section-break {
+  text-align: center;
+  margin: 3rem 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.5em;
+}
+
+.chapter-end {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gold);
+}
+
+.chapter-end .ornament {
+  color: var(--gold);
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+}
+
+/* ═══════════════════════════════════════════
+   RUNNING HEADERS
+   ═══════════════════════════════════════════ */
+
+.running-header {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  padding: 1.5rem 0 0;
+  opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════
+   COLOPHON
+   ═══════════════════════════════════════════ */
+
+.colophon {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.colophon p {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .chapter { padding: 3rem 1.25rem; }
+  .letter-excerpt { padding: 1rem 1.25rem; }
+  .photo-frame.half img { max-width: 85%; }
+}
+
+/* Print styles */
+@media print {
+  body { background: white; }
+  .book-cover { page-break-after: always; min-height: auto; padding: 4rem 2rem; }
+  .volume-divider { page-break-before: always; page-break-after: always; min-height: auto; }
+  .chapter { page-break-before: always; }
+  .photo-frame { page-break-inside: avoid; }
+  figure.historical-image { page-break-inside: avoid; }
+  blockquote { background: #f5f5f5; }
+  .letter-excerpt { background: #f5f5f5; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     BOOK COVER
+     ═══════════════════════════════════════════ -->
+
+<section class="book-cover">
+  <div class="ornament-top">&#9670; &#9670; &#9670;</div>
+  <div class="gold-rule thick"></div>
+  <h1>Where the Waves Met the Shore</h1>
+  <div class="subtitle">The Nielson-Hopkins Heritage</div>
+  <div class="subtitle-line">From Denmark to Michigan, From DeKalb to the Pacific</div>
+  <div class="gold-rule"></div>
+  <div class="family-names">
+    Nielson &middot; Hopkins
+  </div>
+  <div class="gold-rule" style="margin-top: 3rem;"></div>
+  <p style="position: relative; z-index: 1; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: rgba(245,240,232,0.5); max-width: 500px; line-height: 1.8; margin-top: 1rem;">
+    A family story drawn from recorded conversations, ship's logs,<br>
+    the Nielson Family History, photographs, and the memories<br>
+    of those who loved them.
+  </p>
+  <div class="ornament-bottom">&#9670; &#9670; &#9670;</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     DEDICATION
+     ═══════════════════════════════════════════ -->
+
+<section class="chapter" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+  <div style="text-align: center; max-width: 500px; margin: 0 auto;">
+    <p style="font-style: italic; font-size: 1.15rem; line-height: 1.9; color: var(--charcoal); opacity: 0.8;">
+      For Jim, Linda, and Mike &mdash; who carry both bloodlines forward &mdash; and for every grandchild who will one day ask where they came from.
+    </p>
+    <div class="gold-rule" style="margin: 1.5rem auto;"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TABLE OF CONTENTS
+     ═══════════════════════════════════════════ -->
+
+<section class="toc">
+  <h2>Contents</h2>
+
+  <div class="toc-section">
+    <h3>Part I &mdash; The Woman He Married</h3>
+    <a href="#ch1" class="toc-entry"><span class="chapter-num">I</span><span class="chapter-title">Across the Atlantic</span><span class="dots"></span></a>
+    <a href="#ch2" class="toc-entry"><span class="chapter-num">II</span><span class="chapter-title">The House on Clinton Street</span><span class="dots"></span></a>
+    <a href="#ch3" class="toc-entry"><span class="chapter-num">III</span><span class="chapter-title">Patricia</span><span class="dots"></span></a>
+  </div>
+
+  <div class="toc-section">
+    <h3>Part II &mdash; A Boy from DeKalb</h3>
+    <a href="#ch4" class="toc-entry"><span class="chapter-num">IV</span><span class="chapter-title">614 South 4th Street</span><span class="dots"></span></a>
+    <a href="#ch5" class="toc-entry"><span class="chapter-num">V</span><span class="chapter-title">The Navy Takes Over</span><span class="dots"></span></a>
+  </div>
+
+  <div class="toc-section">
+    <h3>Part III &mdash; The War: USS LCS(L)(3)-42</h3>
+    <a href="#ch6" class="toc-entry"><span class="chapter-num">VI</span><span class="chapter-title">The Mighty Midgets</span><span class="dots"></span></a>
+    <a href="#ch7" class="toc-entry"><span class="chapter-num">VII</span><span class="chapter-title">San Diego to Pearl Harbor</span><span class="dots"></span></a>
+    <a href="#ch8" class="toc-entry"><span class="chapter-num">VIII</span><span class="chapter-title">Across the Pacific</span><span class="dots"></span></a>
+    <a href="#ch9" class="toc-entry"><span class="chapter-num">IX</span><span class="chapter-title">Into the Fire &mdash; Zamboanga</span><span class="dots"></span></a>
+    <a href="#ch10" class="toc-entry"><span class="chapter-num">X</span><span class="chapter-title">Borneo &mdash; 100 Mines</span><span class="dots"></span></a>
+    <a href="#ch11" class="toc-entry"><span class="chapter-num">XI</span><span class="chapter-title">Training for Japan</span><span class="dots"></span></a>
+    <a href="#ch12" class="toc-entry"><span class="chapter-num">XII</span><span class="chapter-title">Korea and the Long Way Home</span><span class="dots"></span></a>
+    <a href="#ch13" class="toc-entry"><span class="chapter-num">XIII</span><span class="chapter-title">Decorations and Service Record</span><span class="dots"></span></a>
+  </div>
+
+  <div class="toc-section">
+    <h3>Part IV &mdash; Coming Home</h3>
+    <a href="#ch14" class="toc-entry"><span class="chapter-num">XIV</span><span class="chapter-title">Becoming a Surgeon</span><span class="dots"></span></a>
+    <a href="#ch15" class="toc-entry"><span class="chapter-num">XV</span><span class="chapter-title">Pat</span><span class="dots"></span></a>
+    <a href="#ch16" class="toc-entry"><span class="chapter-num">XVI</span><span class="chapter-title">Family</span><span class="dots"></span></a>
+    <a href="#ch17" class="toc-entry"><span class="chapter-num">XVII</span><span class="chapter-title">What He Taught Without Saying It</span><span class="dots"></span></a>
+  </div>
+
+  <div class="toc-section">
+    <h3>Epilogue</h3>
+    <a href="#epilogue" class="toc-entry"><span class="chapter-num"></span><span class="chapter-title">Trippingly on the Tongue</span><span class="dots"></span></a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART I: THE NIELSONS
+     ═══════════════════════════════════════════════════════════════ -->
+
+<section class="volume-divider">
+  <div class="vol-label">Part One</div>
+  <h2>The Woman He Married</h2>
+  <div class="gold-rule"></div>
+  <div class="vol-subtitle">The Nielson Family<br>Denmark &middot; St. Louis &middot; Muskegon, Michigan</div>
+</section>
+
+
+<!-- FAMILY TREE: NIELSON -->
+<section class="family-tree-section">
+  <h3>The Nielson Family</h3>
+  <div class="tree-container">
+    <div class="tree-row">
+      <div class="tree-person patriarch">
+        <span class="name">George Nielsen</span>
+        <span class="dates">Denmark &rarr; St. Louis, MO</span>
+        <span class="origin">Immigrant patriarch</span>
+      </div>
+      <div style="display: flex; align-items: center; color: var(--gold); font-size: 1.2rem; padding: 0 0.5rem;">&infin;</div>
+      <div class="tree-person matriarch">
+        <span class="name">Mrs. George Nielsen</span>
+        <span class="dates">Denmark</span>
+        <span class="origin">Mother of ten</span>
+      </div>
+    </div>
+    <div class="tree-connector">&darr;</div>
+    <div class="tree-row">
+      <div class="tree-person"><span class="name">Johanne</span></div>
+      <div class="tree-person">
+        <span class="name">William "Bill"</span>
+        <span class="dates">1889&ndash;1975</span>
+      </div>
+      <div class="tree-person"><span class="name">Harold</span><span class="dates" style="font-size:0.6rem;">drowned age 16</span></div>
+      <div class="tree-person"><span class="name">Emelie</span></div>
+      <div class="tree-person patriarch" style="border-width: 3px;"><span class="name">Dan</span><span class="dates">b. 1904</span></div>
+      <div class="tree-person"><span class="name">Maren</span></div>
+      <div class="tree-person"><span class="name">Geneva</span></div>
+      <div class="tree-person"><span class="name">Helen</span></div>
+      <div class="tree-person"><span class="name">Lillian</span></div>
+      <div class="tree-person"><span class="name">Julia</span></div>
+    </div>
+    <div class="tree-marriage">&uarr;&darr; Dan Nielsen married Ethlyn Anderson, September 14, 1929, Grand Rapids, Michigan &uarr;&darr;</div>
+    <div class="tree-row">
+      <div class="tree-person patriarch" style="border-width: 3px;">
+        <span class="name">Dan Nielsen</span>
+        <span class="dates">b. 1904</span>
+        <span class="origin">6th child of George</span>
+      </div>
+      <div style="display: flex; align-items: center; color: var(--gold); font-size: 1.2rem; padding: 0 0.5rem;">&infin; <span style="font-size: 0.6rem; margin-left: 0.25rem;">m. Sep 14, 1929</span></div>
+      <div class="tree-person matriarch" style="border-width: 3px;">
+        <span class="name">Ethlyn Anderson</span>
+        <span class="dates">Grand Rapids, MI</span>
+      </div>
+    </div>
+    <div class="tree-connector">&darr;</div>
+    <div class="tree-row">
+      <div class="tree-person patriarch" style="border-color: var(--forest); border-width: 3px;">
+        <span class="name">Patricia Nielsen</span>
+        <span class="dates">b. April 8, 1931</span>
+      </div>
+      <div class="tree-person">
+        <span class="name">Marilyn "Mickey"</span>
+        <span class="dates">b. July 17, 1932</span>
+      </div>
+    </div>
+    <div class="tree-marriage">&uarr;&darr; Patricia Nielsen married Dr. James Garvey Hopkins, May 30, 1953 &mdash; connecting the Nielson and Hopkins lines &uarr;&darr;</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER I: ACROSS THE ATLANTIC
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; The Woman He Married</div>
+
+<section class="chapter" id="ch1">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter One</span>
+    <h2 class="chapter-title">Across the Atlantic</h2>
+    <p class="chapter-subtitle">Denmark to Missouri to Michigan, 1795&ndash;1901</p>
+  </div>
+
+  <div class="body-text">
+    <p>This is, at its heart, the story of a man named James Garvey Hopkins &mdash; a quiet boy from DeKalb, Illinois, who took an oath in the eighth grade, sailed a gunboat across the Pacific, became a thoracic surgeon, and never once broke a promise. Most of this book will follow him: through the Navy V-12 program and Midshipmen's School, through the commissioning of USS LCS(L)(3)-42 at Portland, through Zamboanga and Borneo and the minefields of the Yellow Sea, and finally home to a life of medicine and family in the American Southwest.</p>
+
+    <p>But to understand what he came home <em>to</em> &mdash; to understand the woman who met him in the corridors of St. Luke's Hospital in Chicago, the woman who would run his household and raise his children and match his quiet discipline with a fearlessness entirely her own &mdash; you have to go back further. You have to cross an ocean.</p>
+
+    <p>Patricia Nielson did not come from nowhere. She came from a family that had been building something for generations &mdash; crossing water, putting down roots, filling churches and kitchens and baseball diamonds with the particular energy of Danish immigrants who had decided that America was worth the trouble. To know Pat is to know where she came from. And where she came from was Denmark, by way of St. Louis, by way of the shores of Lake Michigan.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>They came from Denmark, as so many did in those years &mdash; a family named Nielsen, carrying with them whatever a Danish family carries across an ocean: a language, a faith, a stubbornness that would prove more durable than any piece of luggage. George Nielsen brought his family to St. Louis, Missouri, and settled into the vast current of Scandinavian immigration that was remaking the American Midwest one household at a time.</p>
+
+    <p>St. Louis in the late nineteenth century was a city of arrivals. Germans, Irish, Czechs, and Scandinavians poured in by the tens of thousands, filling the factories and stockyards and breweries, building churches in their own languages, establishing the rhythms of lives that would echo through generations. The Nielsens were part of that tide &mdash; unremarkable in the demographics, extraordinary in the particulars, the way every immigrant family is.</p>
+
+    <p>George and his wife had ten children. Say that number out loud and let it settle: <em>ten</em>. Johanne, William, Harold, Emelie, Dan, Maren, Geneva, Helen, Lillian, and Julia. A household that must have sounded like a small country, with its own internal politics, its own economy of chores and hand-me-downs, its own unwritten constitution governing who sat where at dinner and who got the last piece of bread.</p>
+
+
+
+    <p>In 1890, the family left St. Louis and moved to Fruitport, Michigan &mdash; a small community near the shores of Lake Michigan. A year later, they moved again, to Muskegon. This was timber country, lumber country, a place where Scandinavian immigrants felt something close to home in the cold winters and the pine forests and the vast gray lake that stretched to the horizon like a landlocked sea.</p>
+
+    <p>The Danish Lutheran Church became the center of the family's life. This was the pattern for Scandinavian immigrants everywhere &mdash; the church was not merely a place of worship but a community center, a social club, a place where you heard your own language spoken with the right inflections and ate food that tasted the way food was supposed to taste. The Nielsens attended faithfully. They would continue to attend for more than half a century.</p>
+
+    <p>In 1901, George built the house at 38 Clinton Street in Muskegon. It was the kind of house an immigrant builds when he has finally decided he is staying &mdash; solid, practical, meant to last. It would become the family's anchor, the address that all ten children would remember as the place where everything began.</p>
+
+    <p>The Danish Lutheran Church was more than a building — it was the architecture of belonging. For George and his wife, it was the one place in America where the world still made sense in the old language, where the psalms were sung the way they'd been sung in Denmark, where the coffee after services tasted right because the women who made it remembered how coffee was supposed to taste. For their children, it was the bridge between the parents' world and the American one — the place where you learned that faith and community were not separate things but the same thing, expressed in potluck dinners and Christmas Eve services and the quiet expectation that you would show up, every Sunday, without being asked.</p>
+
+    <p>George Nielsen had crossed an ocean, raised ten children, and built a house. He had done what immigrants do. The rest would be up to his children.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER II: THE HOUSE ON CLINTON STREET
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; The Woman He Married</div>
+
+<section class="chapter" id="ch2">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Two</span>
+    <h2 class="chapter-title">The House on Clinton Street</h2>
+    <p class="chapter-subtitle">George's Children &amp; the Muskegon Nielsens</p>
+  </div>
+
+  <div class="body-text">
+    <p>George and Maren's ten children grew up in Muskegon, shaped by Lake Michigan winters and Central Lutheran Church summers, by the Danish language fading into English and the immigrant hunger for respectability sharpening into ambition. They were a force &mdash; ten siblings who filled every room they entered, who married and scattered and came back, who buried each other and named their children after the ones they'd lost.</p>
+
+    <p>The eldest son, William Christian Nielsen &mdash; Bill &mdash; was born in 1889 in St. Louis, the last place the family lived before Michigan. By the time the Nielsens reached Muskegon, Bill was two years old, and he would grow up entirely in Michigan, playing baseball with the kind of ferocity that suggested he had something to prove. He became a third baseman and playing manager of the Muskegon Independents &mdash; both on the field and running the team, which tells you something about Bill's temperament: he couldn't just participate. He had to be in charge.</p>
+
+    <p>George died when Bill was fifteen. The mathematics of that loss were immediate and unforgiving: the oldest son in a large immigrant family, no father, no trust fund, no safety net. Bill went to work. He became a tool and die maker at Lyon's Machine and Tool Company, where he would spend twenty-five years bending metal to specification &mdash; precise, demanding work that required steady hands and a mechanical intelligence no classroom could teach.</p>
+
+    <p>Tragedy came early and stayed. Bill's brother Harold &mdash; the third of the ten children &mdash; drowned in Lake Michigan at the age of sixteen. A swimming accident, the kind that happened with terrible regularity along the Great Lakes, when the water was cold and the currents were stronger than anyone knew. The family absorbed the loss the way families did in that era: silently, completely, carrying it forward without ever quite putting it down.</p>
+
+    <p>Bill met Ellen Dorthea Schmidt at a Lutheran Young People's Convention &mdash; which was, for Scandinavian Lutherans in early twentieth-century Michigan, roughly equivalent to meeting at the only party in town. They married on June 14, 1922, in Menominee. They built their home at 1902 Jefferson Street, where Ellen's father paid for indoor plumbing &mdash; not a small thing in the 1920s, the line between the old world and the new. Two sons came: Harold Alfred in 1923, named for the brother who had drowned, and Lewis George in 1926, named for the patriarch. The naming tells you everything &mdash; this was a family that carried its dead and its living forward in the same breath.</p>
+
+    <p>In his later years, Bill lost his eyesight. Metal filings from decades of tool work had slowly destroyed his vision. Blind, he sat in his chair and listened to the Detroit Tigers on the radio, following the game by ear, imagining the diamond he could no longer see, the third baseman's position he had once owned with his whole body.</p>
+
+    <blockquote><p>Bill died on November 28, 1975. Ellen followed on December 18, 1979. Her death certificate listed the cause of death as "old age, wore out."</p></blockquote>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>But the child of George's who matters most to this story was the sixth: <strong>Dan Nielsen</strong>, born July 9, 1904.</p>
+
+    <p>Dan was an athlete &mdash; a track and field record setter in his youth who played in what was recorded as the first-ever softball game in Michigan, in 1922. Where Bill channeled the immigrant drive into factory work and baseball, Dan channeled it into community. He attended Muskegon Business College and began a long career with the Consolidated Gas Company, rising through the ranks until he served as Superintendent. But it was outside the gas company where Dan's real work showed: he sat on the board of directors of the YMCA, led drives for the American Red Cross, joined the Lion's Club and the Michigan Safety Council, and served the Muskegon Chamber of Commerce. At Central Lutheran Church &mdash; the same church his father had joined forty years earlier &mdash; Dan served as Treasurer of the Church Council and Chairman of the Building Committee.</p>
+
+    <p>He was, in other words, the kind of man who held a community together. Not with speeches or grand gestures, but by showing up &mdash; to every board meeting, every fundraiser, every building project, every Sunday morning. The Danish stubbornness that had carried his father across an ocean, Dan poured into Muskegon itself.</p>
+
+    <p>On September 14, 1929, Dan married Ethlyn Anderson in Grand Rapids, Michigan. Ethlyn was steady and capable &mdash; the kind of woman you needed if you were going to raise children while also running half the volunteer organizations in town. Together they lived at 1508 Clinton Street, just down from the house George had built.</p>
+
+    <p>They had two daughters. Patricia, born April 8, 1931. And Marilyn &mdash; called Mickey &mdash; born July 17, 1932.</p>
+
+    <p>Dan and Ethlyn's home became another node in the Nielsen network of mutual aid. When their sister Emelie's daughter Marne needed a stable home, Dan and Ethlyn took her in and raised her. When Helen Nielsen Fisher was hospitalized with tuberculosis and her husband Bernie couldn't care for their adopted son Joe alone, Joe went to live with Dan and Ethlyn and the girls for months. This was what Nielsens did. You didn't ask whether it was convenient. You made room.</p>
+
+    <p>The house on Jefferson Street &mdash; Bill and Ellen's place &mdash; remained the gathering point for the whole clan: the table stretched from the dining room clear to the living room, every chair filled, the food coming in waves, the cooking wonderful, the conversation LOUD. Ten siblings and their families, all of them Nielsens, all of them Danish-American, all of them Lutheran, all of them talking at once. Pat and Mickey grew up in the middle of that noise &mdash; two girls who learned early that if you wanted to be heard in the Nielsen family, you had to speak up.</p>
+
+    <p>Dan died on August 16, 1952, at Hackley Hospital. He was forty-eight years old.</p>
+
+    <p>The obituary in the Muskegon Chronicle was brief, the way obituaries were then &mdash; name, address, church, cemetery. It did not mention the track records or the softball game or the YMCA board or the Red Cross drives or the years at Consolidated Gas or the cousins he and Ethlyn had taken in. It said: <em>1508 Clinton St. Central Lutheran Church. Oakwood Cemetery.</em> The three coordinates of a life lived entirely for others.</p>
+
+    <p>Pat was twenty-one. Mickey was twenty. Their father &mdash; the man who had held the community together, who had served on every board and chaired every committee, who had opened his home to anyone who needed one &mdash; was gone before either of his daughters married.</p>
+
+    <p>All the Nielsen siblings &mdash; every one of George's ten children &mdash; are buried at Oakwood Cemetery in Muskegon. They came from Denmark, they lived in Michigan, and they rest together in American soil, the whole family within walking distance of each other, the way they always were.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER III: HAROLD AND BERNICE
+     ═══════════════════════════════════════════ -->
+
+
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER IV: PATRICIA
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; The Nielson-Hopkins Bridge</div>
+
+<section class="chapter" id="ch3">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Three</span>
+    <h2 class="chapter-title">Patricia</h2>
+    <p class="chapter-subtitle">The Bridge Between Two Families</p>
+  </div>
+
+  <div class="body-text">
+    <p>Patricia Nielsen was born on April 8, 1931, at 1508 Clinton Street in Muskegon &mdash; the first daughter of Dan and Ethlyn Nielsen. She grew up in the middle of everything: the Danish heritage, the Lutheran church, the big family gatherings at Bill and Ellen's place with the table stretched from the dining room to the living room, the wonderful cooking, the LOUD conversations. She was Dan's daughter through and through &mdash; the community builder's girl, raised in a house that took in cousins and neighbors and anyone who needed a place, shaped by a father who believed you served your community with your whole life and a mother who made it all run.</p>
+
+    <p>Her younger sister Mickey was her closest companion. The two Nielsen girls grew up inseparable on Clinton Street, surrounded by the vast extended family &mdash; all ten of George's children and their broods, the cousins and second cousins, the aunts who did hair and the uncles who played baseball, the whole noisy Danish-American enterprise of belonging.</p>
+
+    <p>Pat became a nurse. This was the early 1950s, and for a bright, confident young woman from a Midwestern family, nursing was one of the paths that led out into the world &mdash; a profession that required intelligence, composure, and the ability to walk into a room full of crisis and know exactly what to do. Pat had all three. Mickey followed her to the same hospital &mdash; both Nielsen sisters chose the same path.</p>
+
+    <p>They trained at St. Luke's Hospital in Chicago &mdash; a large teaching hospital on the South Side where young doctors and young nurses worked the same halls, ate in the same cafeteria, and occasionally found reasons to visit whichever floor the interesting person happened to be working on that day.</p>
+
+
+
+    <figure class="historical-image">
+      <img src="assets/images/IMG_2026_03_22_18_04_19_423.jpg" alt="Nurses relaxing in the lounge at St. Luke's Hospital">
+      <figcaption>Nurses gathered in the lounge at St. Luke's Hospital &mdash; between shifts, catching up on magazines, swapping stories. The hospital was both workplace and community for the young women who trained there.</figcaption>
+    </figure>
+
+    <p>Pat was fearless. Not in the reckless sense &mdash; in the deeply self-assured sense. She could walk into any room, any situation, any crisis, and feel confident that she belonged there and knew what to do. It wasn't arrogance. It was something more fundamental: a woman who had never learned to doubt herself, because nobody in the Nielsen family had ever taught her that doubt was an option.</p>
+
+    <p>She played the piano by ear. No sheet music, no lessons in the formal sense &mdash; she just heard a melody and her hands found it on the keys. It was the kind of talent that doesn't announce itself but simply appears, like a gift that was always there, waiting to be unwrapped.</p>
+
+    <p>She was beautiful. She was social. She was the kind of woman who made a room brighter just by walking into it.</p>
+
+    <p>And somewhere in the corridors of St. Luke's Hospital, between the records room and the nurses' lounge, between the morning rounds and the evening shift change, she met a young doctor in training &mdash; a quiet, disciplined man from DeKalb, Illinois, who had spent two years on a gunboat in the Pacific and had never taken a drink in his life.</p>
+
+    <p>His name was James Garvey Hopkins.</p>
+
+    <p>He was tall and reserved and carried himself with the careful precision of a man who had spent two years making sure everything was done exactly right. He didn't smoke. He didn't drink. He didn't chase women. He was, by all accounts, the most unusual young doctor in the hospital — and Pat, who had never in her life been interested in the usual, noticed him immediately.</p>
+
+    <p>They married on Saturday morning, May 30, 1953, at St. Jean's Church in Muskegon &mdash; an 11 o'clock Nuptial High Mass, the Rev. William Fraser officiating. Pat wore a white gown with a fitted bodice of imported Chantilly lace over satin, iridescent sequins scattered across the bodice, and her late grandmother's gold cross at her throat. A lace Juliet cap encrusted with pearls and sequins held a finger-tip veil of illusion. She carried a white prayer book and rosary topped by white orchids and lilies-of-the-valley.</p>
+
+    <p>Her father had been dead nine months. Her uncle Bernard Fisher &mdash; married to Helen Nielsen, the same aunt whose son Joe had lived with Dan and Ethlyn when Helen had tuberculosis &mdash; walked Pat down the aisle. The Nielsen network of mutual aid, carrying its own forward one more time.</p>
+
+    <p>Mickey stood as bridesmaid beside Charlotte Raddatz and Carolyn VanDyke, all three in matching white dresses with strapless lace bodices and bouffant nylon net skirts with wide sashes of nile green taffeta. James's brother Robert was best man. One hundred and fifty guests attended the afternoon reception at the Nielsen home on Clinton Street &mdash; the same house where Dan had taken in cousins and neighbors, the same rooms where the whole family had gathered for every holiday and Sunday.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/pat-jim-wedding-announcement.jpg" alt="Wedding announcement from the Grand Rapids Press, May 31, 1953">
+      <figcaption><em>The Grand Rapids Press</em>, May 31, 1953 &mdash; "Patricia Nielsen, Dr. Hopkins Marry." The announcement describes the daughter of "Mrs. Dan Nielsen, 1508 Clinton St., and the late Mr. Nielsen" &mdash; Dan had died nine months before his daughter's wedding.</figcaption>
+    </figure>
+
+    <p>After the wedding, Dr. and Mrs. Hopkins left for a honeymoon in Washington, D.C. and Virginia, then settled in Lincoln, Nebraska, where James would serve a three-year residency at the Veterans Administration Hospital. The nurse from Muskegon and the surgeon from DeKalb, beginning a life together that would carry both bloodlines forward for generations.</p>
+
+    <p>But before we can tell that story, we need to go back &mdash; back to DeKalb, back to 614 South 4th Street, back to a boy who made a promise in the eighth grade and kept it for the rest of his life.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART II: THE HOPKINS
+     ═══════════════════════════════════════════════════════════════ -->
+
+<section class="volume-divider">
+  <div class="vol-label">Part Two</div>
+  <h2>The Hopkins</h2>
+  <div class="gold-rule"></div>
+  <div class="vol-subtitle">A Boy from DeKalb<br>DeKalb, Illinois &middot; 1924&ndash;1942</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER V: 614 SOUTH 4TH STREET
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; The Hopkins Family</div>
+
+<section class="chapter" id="ch4">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Four</span>
+    <h2 class="chapter-title">614 South 4th Street</h2>
+    <p class="chapter-subtitle">DeKalb, Illinois &mdash; 1920s&ndash;1940s</p>
+  </div>
+
+  <div class="body-text">
+    <p>At 614 South 4th Street in DeKalb, Illinois, a boy grew up fast.</p>
+
+    <p>The house still stands &mdash; a modest frame house on a tree-lined street, set back from the road, with a neighbor's place close enough to see from the front window. The railroad tracks ran nearby, and when the engineers stopped their locomotives for whatever reason, the boy would go out to meet them. One of them smoked cigars and gave the boy his empty cigar boxes. James kept things in them &mdash; small treasures, the way boys do.</p>
+
+    <p>His father, Henry Hopkins, was not a man to emulate. He drank, and sometimes the boy had to go find him in the bars and bring him home. It was not the kind of thing that gets talked about much, even decades later. <em>"He had to be the responsible one early on,"</em> Jim would say, piecing it together from fragments his father let slip over the years. <em>"That's the way life is."</em></p>
+
+    <p>His mother, Noreen, was gentler but remote &mdash; a woman who seemed perpetually to be sitting in a chair, dealing with one ailment or another. She was kind enough. But it was not a household that ran on warmth.</p>
+
+    <p>What it ran on, somehow, was principle. In the eighth grade, James Garvey Hopkins took an oath. The details of who administered it or what organization sponsored it have been lost. But the oath itself was simple: no drinking, no smoking, no chasing after women.</p>
+
+    <p>He was perhaps thirteen years old. He kept that oath through the war and well beyond &mdash; through the years when it mattered most, when drinking was what everyone around him did and abstaining made him the odd man out. Later in life, he would drink socially, but never in excess. The discipline stuck even when the strict abstinence relaxed.</p>
+
+    <p>Think about that for a moment. A thirteen-year-old boy, living in a house where the father drank and the mother sat in her chair and the railroad engineers handed out empty cigar boxes, stood up in front of whoever was watching and made a promise. And then he walked out into the rest of the twentieth century &mdash; through a world war, through medical school, through decades of surgery and marriage and fatherhood &mdash; and never once broke it. Not once. Not at Pearl Harbor, not in the officers' mess, not at the parties his wife threw, not at the medical conferences where everyone else was drinking. For eighty-five years, the oath held.</p>
+
+    <p>Not because someone was watching. Not because he was afraid. Because he had looked at his father and decided, with the quiet certainty that would define him, that he would be a different kind of man.</p>
+
+    <blockquote><p>"I made that promise when we were in eighth grade, and I'm never sorry about it."</p></blockquote>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER VI: THE NAVY TAKES OVER
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; The Hopkins Family</div>
+
+<section class="chapter" id="ch5">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Five</span>
+    <h2 class="chapter-title">The Navy Takes Over</h2>
+    <p class="chapter-subtitle">Northern Illinois, Central Illinois, New York &mdash; 1942&ndash;1944</p>
+  </div>
+
+  <div class="body-text">
+    <p>The war came, as wars do, and swallowed up the young men.</p>
+
+    <p>James enrolled at Northern Illinois University in DeKalb for his freshman year, studying through the ROTC program. On October 19, 1942, at the age of eighteen, he enlisted in the United States Naval Reserve, Class V-1(G), with the rating of Apprentice Seaman. His father, Thomas Henry Hopkins, signed the parental consent form &mdash; the same father James had pulled from bars as a boy, now signing his son over to the Navy.</p>
+
+    <p>Then the Navy accelerated everything. He was sent to Illinois State Normal University for thirty-two weeks in the V-12 program, where a regular college had been commandeered entirely by the military. Every student was a sailor. The Navy owned the whole place.</p>
+
+    <blockquote><p>"All the students were sailors. The Navy took over the whole thing."</p></blockquote>
+
+    <p>From there, it was Midshipman School at Columbia University in New York &mdash; sixteen weeks, reporting March 5, 1944. He took his oath of office on March 28, 1944, and was assigned File No. 358846. Then ten weeks of amphibious training at Solomons, Maryland. He was commissioned Ensign on June 29, 1944.</p>
+
+    <p>It was during this training that Ensign Hopkins fired a gun for the first time in his life.</p>
+
+    <p>He couldn't hit a thing.</p>
+
+    <blockquote><p>"The first time I shot a gun, I couldn't, for the life of me, hit that target. Either I shot underneath it or I shot above it. The guy said, 'Get out of here. You've had your training.'"</p></blockquote>
+
+    <p>He laughed about it. But the Navy wasn't training him to be a marksman. They were training him to be an officer on a very small ship that was about to sail into a very large war.</p>
+
+    <p>Lieutenant Robert Saundry would be his commanding officer &mdash; a career Navy man, the only one on the ship who signed his logs "U.S.N." rather than "U.S. Naval Reserve." Rough around the edges, but fair. <em>"He stuck to his guns,"</em> James said. <em>"As long as you did your job, he never gave you a bad time."</em> It was the kind of leadership that worked on a small ship: clear expectations, no politics, and the implicit understanding that everyone's survival depended on everyone else's competence.</p>
+
+    <p>James would be second in command. The quiet boy from DeKalb, the one who didn't drink or smoke, the one who couldn't hit a target &mdash; he would be responsible for eighty men on a ship the size of a large house, sailing into the largest war the world had ever known.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART III: THE WAR
+     ═══════════════════════════════════════════════════════════════ -->
+
+<section class="volume-divider">
+  <div class="vol-label">Part Three</div>
+  <h2>The War</h2>
+  <div class="gold-rule"></div>
+  <div class="vol-subtitle">USS LCS(L)(3)-42<br>The Pacific &middot; 1944&ndash;1946</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER VII: THE MIGHTY MIDGETS
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch6">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Six</span>
+    <h2 class="chapter-title">The Mighty Midgets</h2>
+    <p class="chapter-subtitle">Portland, Oregon &mdash; Fall 1944</p>
+  </div>
+
+  <div class="body-text">
+    <p>The whole crew went to Portland by train to pick up their ship.</p>
+
+    <p>LCS-42 was a Landing Craft Support vessel &mdash; a flat-bottomed gunboat about 158 feet long, bristling with rockets and automatic weapons, designed to do one specific and terrifying job: go in close to enemy-held beaches ahead of the invasion force, clear mines, blast pillboxes and gun emplacements with rocket barrages, and get out before the return fire found you. It was small enough to beach itself. It was not built for comfort. It was built for the hundred yards of ocean that separated the fleet from the shore, where everything could go wrong.</p>
+
+    <p>They called them the Mighty Midgets. More firepower per ton than any other ship in the United States Navy. The armament was staggering for a vessel that size: a 3"50 bow gun, twin 40mm guns, four 20mm guns, four .50 caliber machine guns, and ten Mark 7 rocket launchers. One hundred and thirty of these ships were built across three shipyards. LCS-42 came from Commercial Iron Works in Portland, Oregon &mdash; launched on October 8, 1944, and commissioned just eighteen days later.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/lcs-convoy.jpg" alt="LCS convoy in the Pacific">
+      <figcaption>An LCS convoy underway in the Pacific &mdash; the small, heavily armed ships that led invasion fleets onto hostile beaches. LCS-42 was one of these vessels, carrying more firepower per ton than any other ship in the Navy.</figcaption>
+    </figure>
+
+    <p>James was second in command.</p>
+
+    <p>The ship was empty when they arrived &mdash; nothing but beds and equipment bolted to the hull. Everything else had to be loaded. One hundred pounds of carrots. Eighty pounds of onions. Eighty pounds of beets. A crate of cauliflower. Ninety pounds of apples. Seventy-five pounds of cabbage. Four gallons of ice cream. Thirty dozen eggs. Cases of ammunition &mdash; 20-millimeter, 40-millimeter, 3-inch shells. Pyrotechnics, smoke rounds, abandoned-ship kits.</p>
+
+    <p>They tested the engines &mdash; high speed, low speed, everything in between &mdash; on the Columbia River.</p>
+
+    <blockquote><p>"The real importance was the mechanisms, the engines. We actually tested them to make sure we didn't leave this country and have a breakdown."</p></blockquote>
+
+    <p>And then, on a day in early November 1944, they loaded the last provisions and pointed the bow south toward San Diego.</p>
+
+    <p>The Navy also assigned punishments along the way. A man named David Culver was made prisoner at large for being absent without leave for eighteen days. Another man, Ferris, accidentally released a life raft into the ocean during drills. Captain Saundry confined him to his bunk for two days.</p>
+
+    <blockquote><p>"I managed to keep out of trouble."</p></blockquote>
+
+    <p>The ship's logs from those weeks are meticulous. Every four hours, the officer of the watch made an entry &mdash; course, speed, weather, incidents, the lot. And there, in a hand that would remain essentially unchanged for the next eighty years, the signature appears: <strong>J.G. Hopkins, Ensign, U.S. Naval Reserve.</strong></p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER VIII: SAN DIEGO TO PEARL HARBOR
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch7">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Seven</span>
+    <h2 class="chapter-title">San Diego to Pearl Harbor</h2>
+    <p class="chapter-subtitle">December 1944</p>
+  </div>
+
+  <div class="body-text">
+    <p>In San Diego, LCS-42 went into dry dock for hull work. They loaded more ammunition at the destroyer base &mdash; additional 20-millimeter rounds, high-energy ignition rounds, .50-caliber ammunition. They received ninety days of provisions. They were going somewhere, and they were going to be gone a long time.</p>
+
+    <p>On December 1, 1944, they sailed for Pearl Harbor.</p>
+
+    <p>They traveled in convoy &mdash; fourteen LCS vessels in formation, with LCS-36 as the guide ship and a destroyer escort in command. They moved at nine and a half knots, roughly eleven miles per hour. The Pacific stretched out ahead of them, enormous and empty.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/pearl-harbor.png" alt="Pearl Harbor naval base">
+      <figcaption>Pearl Harbor &mdash; where LCS-42 staged before heading into the western Pacific.</figcaption>
+    </figure>
+
+    <p>The days at sea fell into a rhythm. General quarters at dawn and dusk. Gunnery practice &mdash; they'd let out a target sleeve and fire at it. Damage control drills. Fire drills. Abandon-ship simulations. Course changes, speed changes, zigzag patterns to confuse submarines. Every four hours, a new officer took the watch and signed the log.</p>
+
+    <p>Along the way, LCS-43 collided with LCS-41. Five ships had to drop back three and a half miles while the damaged vessels assessed the situation. They rejoined later. Nobody was seriously hurt.</p>
+
+    <p>On December 7 &mdash; three years to the day after the Japanese attack &mdash; they were still at sea, still grinding toward Pearl Harbor at nine knots.</p>
+
+    <p>They arrived on December 11, after ten days of open ocean. Two sailors celebrated by jumping over the side to swim in the warm Hawaiian water. Lawrence Borio and Albert Basco were promptly put on report and assigned twenty hours of extra duty.</p>
+
+    <p>James did not jump in. He wasn't much of a swimmer &mdash; he hadn't learned until college &mdash; and he wasn't much for breaking rules.</p>
+
+    <p>At Pearl Harbor, a man named Mayer was found guilty of being insolent to the petty officer and was sentenced to five days of bread and water. He had to be examined by a doctor first to confirm he was physically fit to endure the punishment.</p>
+
+    <blockquote><p>"Good night," James said when his son read him the entry eighty years later. "I don't remember that."</p></blockquote>
+
+    <p>But he remembered the petty officer &mdash; <em>"an old guy"</em> who was going to keep discipline &mdash; and he remembered the basic architecture of life aboard a warship: the officers made decisions, the petty officers enforced them on the enlisted men, and if you did your job and stayed out of trouble, nobody bothered you.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER IX: ACROSS THE PACIFIC
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch8">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Eight</span>
+    <h2 class="chapter-title">Across the Pacific</h2>
+    <p class="chapter-subtitle">January&ndash;February 1945</p>
+  </div>
+
+  <div class="body-text">
+    <p>From Pearl Harbor, the convoy sailed southwest &mdash; a straight shot across thousands of miles of open Pacific. Pearl Harbor to Majuro in the Marshall Islands, arriving January 12. Majuro to Manus in the Admiralty Islands, arriving January 21. Manus to Hollandia on the northern coast of New Guinea, arriving February 5.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/saipan.png" alt="Saipan">
+      <figcaption>Saipan &mdash; one of the island staging points on the long journey across the Pacific toward the Philippines.</figcaption>
+    </figure>
+
+    <p>The harbor at Hollandia was vast, crowded with ships of every kind &mdash; liberty ships, LSTs, LCIs, destroyers, cargo vessels. The Navy had taken over the entire area, transforming it into a staging ground for the push into the Philippines. The deck temperatures reached 140 degrees Fahrenheit. The steel of the ship became an oven.</p>
+
+    <p>James signed the logs. He mustered the crew. He confirmed that no one was absent without authorization. He noted the transfer of ammunition, the loading of supplies, the occasional disciplinary action. A man named Carlo Jesse Earl lacerated his ankle while loading ammunition; Blake the pharmacist's mate applied three sutures and a local application of sulfide.</p>
+
+    <p>It was in this harbor, somewhere in the vastness of the Pacific, that Bob Hopkins found his brother.</p>
+
+    <p>Bob was also in the Navy, on a different ship, in a different part of the fleet. But by the strange mathematics of war, they ended up anchored in the same bay at the same time. Bob spotted James's ship, called over, and asked to come aboard.</p>
+
+    <p>There was no spare bunk. The tiny LCS was already packed with eighty men. So Bob Hopkins slept in the conning tower &mdash; the small observation platform at the top of the ship &mdash; and in the morning, he went back to his own vessel.</p>
+
+    <p>They didn't see each other again until the war was over.</p>
+
+    <blockquote><p>"He recognized us."</p></blockquote>
+
+    <p>The nights were the worst. They traveled in convoy without lights &mdash; complete blackout, every ship dark, navigating by instruments alone. One night, in the inky darkness between islands, James felt the ship drifting. He could sense the bulk of another vessel nearby but couldn't see it. They were close &mdash; terrifyingly close &mdash; to a collision.</p>
+
+    <blockquote><p>"That was where there was nothing but dark. We had to go at night without lights on. And we just had to make sure."</p></blockquote>
+
+    <p>They made sure. The ships slid past each other in the blackness, and morning came, and they were still alive.</p>
+
+    <p>On February 18, they formed up with the convoy and set course for Leyte, in the Philippines. They arrived on February 25.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/destroyer.jpg" alt="Destroyer escort">
+      <figcaption>A destroyer escort in the Pacific &mdash; the larger ships that operated with LCS flotillas during the campaign across the western Pacific.</figcaption>
+    </figure>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER X: INTO THE FIRE — ZAMBOANGA
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch9">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Nine</span>
+    <h2 class="chapter-title">Into the Fire &mdash; Zamboanga</h2>
+    <p class="chapter-subtitle">Philippines &mdash; March 1945</p>
+  </div>
+
+  <div class="body-text">
+    <p>The war in the southern Pacific was turning. Five months earlier, in September 1944, the great Battle of Leyte Gulf had shattered the Japanese fleet. It was, by some measures, the largest naval battle in history &mdash; and it had been decided in part by an act of breathtaking American audacity.</p>
+
+    <p>Jim, who had studied the battle in detail, explained it to his father during one of their sessions with the ship's logs:</p>
+
+    <blockquote><p>"All we had was four destroyers or destroyer escorts that just came attacking them like a suicide mission. They got so close that the cruisers' main guns couldn't go low enough to hit them. That was their strategy &mdash; get in close. They fired torpedoes and caused all the other ships to scatter. The Navy was so aggressive and so desperate that &mdash; you were going to die. You might as well try to get as close as you can to them."</p></blockquote>
+
+    <p>The Japanese had been driven from the Philippines. But there was still work to do &mdash; island by island, beach by beach, the approaches had to be cleared and secured.</p>
+
+    <p>On March 3, 1945, LCS-42 reported to Rear Admiral Forrest B. Royal at Mindoro. They were assigned to Task Group 78.1: eleven yard mine sweepers, two cruisers, thirteen destroyers, and seven LCS(L)s. It was a formidable force, assembled for a specific purpose &mdash; the liberation of the southern Philippines, island by island, beach by beach, mine by mine.</p>
+
+    <p>The task group was a cross-section of the Pacific fleet: the big ships provided covering fire, the mine sweepers cleared the approaches, and the LCS vessels &mdash; the Mighty Midgets &mdash; went in first to soften the beaches. It was a hierarchy measured in distance from the enemy: the farther back you were, the safer you were. LCS-42 was always in front.</p>
+
+    <p>On March 8, they began minesweeping under fire in the Basilan Strait. The LCS knocked out a six-inch gun emplacement, pillboxes, and machine gun nests &mdash; clearing the approaches for the main invasion force.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/zamboanga.png" alt="Zamboanga, Philippines">
+      <figcaption>Zamboanga, Philippines &mdash; where LCS-42 cleared beaches ahead of the invasion force on March 10, 1945.</figcaption>
+    </figure>
+
+    <p>On March 10, 1945, at 0932 hours, the invasion of Zamboanga began. LCS-42 was in the first line &mdash; ahead of the troop transports, ahead of the destroyers, ahead of everyone except the mines and the Japanese guns waiting on the shore.</p>
+
+    <p>James described it in the way of a man who had carried it quietly for decades:</p>
+
+    <blockquote><p>"We were the first ship up and everybody said goodbye."</p></blockquote>
+
+    <p>He paused.</p>
+
+    <blockquote><p>"And boy, we went in and you see this whole front end of that thing &mdash; rockets."</p></blockquote>
+
+    <p>The LCS launched rockets at 1,000 yards and strafed to 300 yards from the beach. The rockets screamed off the launchers in sheets of fire, slamming into the first hundred feet of beach &mdash; obliterating pillboxes, gun emplacements, booby traps, anything that could kill the soldiers who would follow.</p>
+
+    <blockquote><p>"You clear the first hundred feet of the beach. So when the military get there, they don't get all shot up by bombs and booby traps."</p></blockquote>
+
+    <p>They went in. They fired. And then came the order to scatter.</p>
+
+    <blockquote><p>"And then we said, scatter. And we went the other way. And on the way out, you still keep your guns loaded."</p></blockquote>
+
+    <p>Japanese positions on the hillsides above the beach opened fire as LCS-42 turned and ran. The crew fired back &mdash; at pillboxes, at gun emplacements, at anything that moved on the shore. They blew one position after another as they pulled away, running the gauntlet until they were out of range.</p>
+
+    <blockquote><p>"And finally, we got out of the zone where it was and we went that way. Got out. And everybody said, 'Whoa, you're lucky you survived.'"</p></blockquote>
+
+    <p>They had to do it twice.</p>
+
+    <p>Two separate beaches, two separate invasions, two times being the first ship in. The rest of the fleet watched from a safer distance, and each time, the men of LCS-42 came back to the same greeting: <em>You're lucky.</em></p>
+
+    <p>It wasn't luck. It was the work &mdash; the engine tests in Portland, the gunnery practice off San Diego, the endless drills between Pearl Harbor and New Guinea. By the time they had to do it for real, they knew the ship, they knew each other, and they knew what to do.</p>
+
+    <p>They never got hit.</p>
+
+    <p>It wasn't luck. It was the work &mdash; months of training compressed into minutes of execution. The engine tests in Portland, the gunnery practice off San Diego, the endless drills between Pearl Harbor and New Guinea. By the time they had to do it for real, they knew the ship, they knew each other, and they knew what to do. The preparation had been tedious and repetitive, and it had saved their lives.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>On March 16, they supported the invasion of Basilan Island. In one of the war's grim ironies, faulty intelligence led LCS-42 to fire on a Moro village. When the mistake was discovered, they sent medical aid. The ship's log records the incident with the dry precision of military documentation, but the human cost is written between the lines &mdash; the kind of thing that happened in war, the kind of thing that could never be fully undone.</p>
+
+    <p>On March 31, Easter Sunday, the ship was at sea.</p>
+
+    <blockquote><p>"It never seemed like Easter at all."</p></blockquote>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XI: BORNEO — 100 MINES
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch10">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Ten</span>
+    <h2 class="chapter-title">Borneo &mdash; 100 Mines</h2>
+    <p class="chapter-subtitle">Borneo &mdash; Mid-1945</p>
+  </div>
+
+  <div class="body-text">
+    <p>After the Philippines, they sailed for Borneo.</p>
+
+    <p>By this point, the Japanese were retreating. Their planes still flew over &mdash; James remembered looking up and seeing them pass directly above &mdash; but they weren't attacking anymore. They were trying to get home.</p>
+
+    <blockquote><p>"The Jap planes would fly over the top of us. And they didn't drop anything. They're trying to get the heck out of here. They don't want to have anything more to do with the war than you do."</p></blockquote>
+
+    <p>On June 2, LCS-42 sailed three days ahead of the invasion force with the minesweepers. Their job was the same dangerous, methodical work: find the mines, pull them up, blow them. On June 7, the sweeping began in earnest. One fleet mine sweeper was lost.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/yard-mine-sweeper.png" alt="Yard Mine Sweeper">
+      <figcaption>A yard mine sweeper &mdash; the type of vessel that worked alongside LCS ships clearing harbors and coastlines of Japanese mines. By June 18, LCS-42 was credited with destroying one hundred mines.</figcaption>
+    </figure>
+
+    <p>On June 10, the invasion of Borneo began at 0930. By June 18, LCS-42 had been credited with destroying one hundred mines &mdash; a staggering number, each one a potential catastrophe, each one found and neutralized by the crew of a ship the size of a large house.</p>
+
+    <p>On June 18, Rear Admiral Forrest B. Royal &mdash; the same admiral who had commanded their task group since Mindoro &mdash; was found dead in his cabin. A heart attack during the midwatch. He was the highest-ranking officer they had served under, and the war had killed him not with a bullet but with the accumulated weight of command. The human body was never designed to carry the burden of sending young men into fire, and even admirals broke under it.</p>
+
+    <p>The engines were giving trouble too. Bad fuel had fouled the machinery, and the crew had to repair it themselves &mdash; no shipyard, no mechanics, just sailors who had learned their ship well enough to keep it running on willpower and whatever parts they could fabricate or cannibalize.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>And then, in a harbor somewhere off Borneo &mdash; <em>"the big, big harbor, lots of boats"</em> &mdash; came one of the stories the family would tell forever.</p>
+
+    <p>Everyone else had gone ashore. The officers wanted to drink. The enlisted men wanted to drink. The whole ship emptied out for liberty, and James, who did not drink, volunteered to stay behind.</p>
+
+    <blockquote><p>"I was the only officer left on board. I didn't give a damn because they're all going to go drink beer and whiskey. And I said, no, I can do without that."</p></blockquote>
+
+    <p>He was alone on the ship when the signal came.</p>
+
+    <p>An admiral &mdash; a real admiral, with a beautiful ship and a full entourage &mdash; was coming aboard LCS-42. James watched the launch approach with growing bewilderment.</p>
+
+    <blockquote><p>"My God, what the hell are they coming over here for? This little dumpy boat."</p></blockquote>
+
+    <p>The first man off the admiral's launch carried a great big black satchel.</p>
+
+    <p>The admiral came aboard with three or four sailors. James saluted. <em>"Yes sir, yes sir, yes sir."</em></p>
+
+    <p>The admiral got right to the point: <em>"I want to see your communication equipment."</em></p>
+
+    <p>The communication equipment was locked in a big locker in the captain's quarters. The locker also contained the ship's liquor supply &mdash; the bottles that were kept sealed at sea and only opened in port. James was the only person aboard who had the combination.</p>
+
+    <p>He knelt down and began working the lock. The door swung open. He could see the bottles lying against the back of the locker, and he reached in carefully to avoid disturbing them.</p>
+
+    <p>A hand came over his shoulder and took the first bottle.</p>
+
+    <p>James kept looking into the locker. Another hand reached in and took the second bottle. He heard them going into the satchel behind him.</p>
+
+    <p>He opened the door a little wider. Another bottle. The same hand. Into the satchel.</p>
+
+    <p>When the satchel was full, James turned around. <em>"Anything else you'd like?"</em></p>
+
+    <p><em>"No,"</em> the admiral said. <em>"The satchel's filled."</em></p>
+
+    <p>And then: <em>"That's an absolute good work. You've taken care of that ship and you've done the thing."</em></p>
+
+    <p>The admiral climbed back into his launch and motored away, his aide carrying the full satchel.</p>
+
+    <blockquote><p>"I'll put you in for accommodation," the admiral had said as he left.</p></blockquote>
+
+    <p>When Captain Saundry returned from liberty, the first thing he asked was how things had gone. James told him about the admiral.</p>
+
+    <p>Saundry didn't blink. <em>"You did good. Just keep your mouth shut."</em></p>
+
+    <p>He explained: <em>"That's standard stuff. That's how they get refilled."</em></p>
+
+    <p>The admiral had been at sea for a year and had run out of his personal supply. The small ships in the fleet &mdash; the ones nobody important ever visited &mdash; were his liquor stores. And James, the only man on the ship who had never taken a drink in his life, was the one who served him.</p>
+
+    <p>James never found out if the accommodation came through. It didn't matter. He'd done his duty, and the captain said he did good, and that was enough.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/cagayan-river.png" alt="Cagayan River">
+      <figcaption>The Cagayan River in northern Luzon &mdash; where LCS-42 navigated inland waterways during operations in the Philippines.</figcaption>
+    </figure>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XII: TRAINING FOR JAPAN
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch11">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Eleven</span>
+    <h2 class="chapter-title">Training for Japan</h2>
+    <p class="chapter-subtitle">Subic Bay, Luzon &mdash; July&ndash;August 1945</p>
+  </div>
+
+  <div class="body-text">
+    <p>In July, LCS-42 sailed to Subic Bay on the island of Luzon. The mission had changed: they were no longer clearing beaches in the southern Philippines. They were training troops for the invasion of Japan.</p>
+
+    <p>Everyone knew what that meant. The invasion of the Japanese home islands would be the largest amphibious operation in history &mdash; larger than Normandy, larger than anything the world had ever seen. The casualty estimates were staggering. The men training at Subic Bay were preparing for an operation that many of them would not survive.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/okinawa.png" alt="Okinawa">
+      <figcaption>Okinawa &mdash; the bloodiest battle of the Pacific campaign, where kamikazes targeted the fleet. The battles that preceded it shaped the terrible calculus of the planned invasion of Japan.</figcaption>
+    </figure>
+
+    <p>Life on LCS-42 was not complicated. It was just relentless. Breakfast was oatmeal and powdered milk &mdash; <em>"standard stuff"</em> &mdash; eaten in the officers' quarters with one, two, or three other men. They had bread, which the galley kept fresh. They had an enlisted steward, a Black man whom James remembered as <em>"a real nice man,"</em> who took care of the officers' meals. He'd come around and take orders: <em>"I'll give you your dinner at nine and yours at ten."</em></p>
+
+    <p>James didn't drink coffee. He didn't drink beer. He didn't smoke. This made him an oddity on a ship full of young men who did all three, and it also made him the natural choice for one particular duty: whenever the ship pulled into port and the crew went ashore for liberty, someone had to stay behind. It was always James.</p>
+
+    <blockquote><p>"I was always left on the boat as the commander. I was second in command, actually. And I did that on purpose because they all wanted to go drink beer and whiskey. And I said, no, I can do without that."</p></blockquote>
+
+    <p>He wasn't bitter about it. He understood the logic. He didn't want what they wanted, and the ship needed someone, and so it was him. Every port, every liberty call, every time &mdash; the quiet man from DeKalb, Illinois, alone on the deck of a rust bucket in some tropical harbor, watching the others go.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>The typhoons were another matter entirely.</p>
+
+    <p>LCS-42 was a flat-bottomed ship, designed for shallow water and beach approaches. It was emphatically not designed for open-ocean storms. When typhoons hit &mdash; and they hit more than once &mdash; the ship rolled and pitched with a violence that made normal life impossible.</p>
+
+    <blockquote><p>"Typhoons? It was awful. Because it was too small."</p></blockquote>
+
+    <p>The crew retreated to their bunks and strapped themselves in. The ship heaved in every direction &mdash; side to side, bow to stern, in combinations that defied geometry. You couldn't walk. You couldn't eat. You couldn't do anything except hold on and wait.</p>
+
+    <blockquote><p>"Sometimes three days."</p></blockquote>
+
+    <p>During typhoons, the convoy scattered to avoid collisions, but the small ships couldn't use too much power or they'd outrun the storm track and end up in even worse conditions. So they just endured it &mdash; riding out the storm at minimal speed, losing three days of travel, waiting for the ocean to remember that ships were supposed to float upright.</p>
+
+    <p>The steward, God bless him, still tried to serve meals. He'd stagger through the pitching corridors with plates of food, doing his best.</p>
+
+    <p>When the family asked if it was the worst thing he experienced, James thought about it.</p>
+
+    <blockquote><p>"And that's the only time I thought I wasn't going to come home."</p></blockquote>
+
+    <p>Not the beaches. Not the rockets and the return fire. Not the mines or the blackout nights. The typhoons. Because in combat, you could do something &mdash; fire, maneuver, fight back. In a typhoon, there was nothing to do but survive.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>On August 13, they heard the war might be over.</p>
+
+    <p>On August 15, they arrived at Subic Bay at dawn. Every ship in the harbor was firing &mdash; not at the enemy, but into the sky. Fireworks, signal flares, tracer rounds &mdash; the entire fleet celebrating with the only tools it had. The war was over.</p>
+
+    <blockquote><p>"All was over for us except the signing."</p></blockquote>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XIII: KOREA AND THE LONG WAY HOME
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch12">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Twelve</span>
+    <h2 class="chapter-title">Korea and the Long Way Home</h2>
+    <p class="chapter-subtitle">The Pacific &mdash; September 1945&ndash;February 1946</p>
+  </div>
+
+  <div class="body-text">
+    <p>The war was over, but the Navy's work was not. There were harbors to clear, prisoners to repatriate, a vast Pacific theater to wind down one ship at a time. For the crew of LCS-42, the long way home would take six more months.</p>
+
+    <p>In September, they sailed for Okinawa &mdash; but had to return when a crankshaft broke. On September 14, with a new engine installed, they sailed again. On September 28, they arrived at Jinsen &mdash; the Korean name for Incheon &mdash; and began the strange postwar work of occupying a peninsula that had been under Japanese control for forty years.</p>
+
+    <p>On October 3, they sailed for Pusan, piloted through a harbor still heavily mined. The mines were everywhere &mdash; the Japanese had seeded the Korean coast with them, and the war's end had not made them less dangerous. Every approach was a calculation, every channel a gamble.</p>
+
+    <p>On October 4, LCS-42 was assigned to escort two Japanese destroyers from Chinkai. The enemy of yesterday had become the charge of today &mdash; the Japanese Navy, defeated and disarmed, being shepherded by the same ships that had spent the past year blowing their positions off the beaches.</p>
+
+    <p>On October 6, they spotted a floating mine and blew it up. The same day, they learned that a Japanese destroyer had hit a mine and sunk. The war was over, but the ocean didn't know it yet.</p>
+
+    <p>On October 11, they arrived at Chinkai &mdash; the largest Japanese naval base in Korea, where seven thousand unpatriated Japanese personnel were still waiting to go home. It was a strange and surreal scene: thousands of former enemy sailors, no longer a threat, just men who wanted to get back to Japan the same way James wanted to get back to Illinois. The base was enormous &mdash; built for a navy that no longer existed, staffed by men who no longer had a war to fight.</p>
+
+    <p>The irony was not lost on the crew of LCS-42. Six months earlier, they had been clearing beaches for invasions. Now they were escorting Japanese destroyers and transporting injured Koreans. The war's end had not simplified the Pacific &mdash; it had merely replaced one set of problems with another.</p>
+
+    <p>On October 17 and 18, LCS-42 transported injured Koreans from a train wreck to Pusan for medical aid. The war was over, but the work kept finding them &mdash; not combat, not glory, just the human wreckage that wars leave behind, the small emergencies that needed a ship and a crew and someone willing to help.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>Through November and December, they ferried between China and Korea, clearing mines, patrolling coastlines, doing the quiet, unglamorous work of turning a war zone back into a place where people could live. There were no more invasions, no more rocket barrages, no more first-in assignments. Just the steady, essential labor of cleaning up after history's largest conflict &mdash; the kind of work that earns no medals but without which no peace can hold.</p>
+
+    <p>The days blurred together. One port looked like another. One cleared minefield led to the next. James signed the logs, mustered the crew, made his entries in the same careful hand. The routine was its own comfort &mdash; the Navy's gift to men who had seen too much: keep busy, keep moving, keep the forms filled out, and eventually you'll find yourself pointed toward home.</p>
+
+    <p>On December 10, the orders finally came: go home. Via Okinawa.</p>
+
+    <p>On February 5, 1946, LCS-42 arrived in San Francisco. The Golden Gate Bridge appeared out of the Pacific fog, and for the first time in over a year, they were looking at America. The crew walked off the ship and back into the country they had left &mdash; older, quieter, carrying things inside them that they would never fully explain to the people who had stayed behind. James was twenty-two years old.</p>
+
+    <p>He was promoted to Lieutenant Junior Grade at the end of the war. <em>"Everybody got promoted,"</em> he said. The Navy tried to keep him &mdash; they offered another promotion to full Lieutenant if he'd re-enlist for four more years.</p>
+
+    <blockquote><p>"But we were fed up. We had typhoons, the boat going like this and this way."</p></blockquote>
+
+    <p>He mustered out, having served more than two years on LCS-42. He stayed in the Naval Reserve &mdash; monthly meetings, the occasional request for help &mdash; but his active service was over. He was twenty-two years old, and he had the rest of his life to figure out.</p>
+
+    <p>Many years later, his son Jim took him to visit the aircraft carrier USS Kitty Hawk in San Diego, where a neighbor named Tucker served. They toured the ship &mdash; Jim, still a boy, climbed with his father up the long ladders to the conning tower.</p>
+
+    <p>But it was the departure that stayed with Jim for the rest of his life:</p>
+
+    <blockquote><p>"As we left the ship, the Marine guard didn't do this for anybody else. But as soon as my dad and I were the last ones to get off the ship, he gave us a kind of a salute &mdash; a motion with his rifle to indicate respect. And I said to Grandpa, 'He knows you were in the Navy.' Because I thought that's the reason why he did it. It was very moving. Just as a kid, you remember those kind of things."</p></blockquote>
+
+    <p>LCS-42 was eventually decommissioned and sold to Martin B. Dahl of Seattle. It was scrapped &mdash; the ship that had cleared beaches at Zamboanga, destroyed a hundred mines off Borneo, survived typhoons in the open Pacific, and served as an admiral's liquor store, reduced to metal and sold by the pound. That's what happens to warships. They serve, and then they're gone, and the only thing that survives is the log book and the memories of the men who sailed them.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XIV: DECORATIONS AND SERVICE RECORD
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; USS LCS(L)(3)-42</div>
+
+<section class="chapter" id="ch13">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Thirteen</span>
+    <h2 class="chapter-title">Decorations and Service Record</h2>
+    <p class="chapter-subtitle">The Official Record of James G. Hopkins, USNR</p>
+  </div>
+
+  <div class="body-text">
+    <p>The Navy keeps everything. Every assignment, every promotion, every commendation, every transfer &mdash; all of it recorded in the meticulous language of military bureaucracy, the human story reduced to dates and file numbers and abbreviations that tell you everything and nothing at the same time.</p>
+
+    <p>James Garvey Hopkins separated from active duty on May 17, 1946, at Great Lakes, Illinois. His awards tell the story of where he'd been:</p>
+
+    <div class="letter-excerpt">
+      <p><strong>World War II Victory Medal</strong> &mdash; for service during the global conflict</p>
+      <p><strong>American Campaign Medal</strong> &mdash; for service in the American theater</p>
+      <p><strong>Asiatic-Pacific Campaign Medal with one star</strong> &mdash; for the Philippines, Borneo, and beyond</p>
+      <p><strong>Philippine Liberation Ribbon with one star</strong> &mdash; for the liberation of the Philippine Islands</p>
+      <p><strong>Honorable Service Lapel Pin</strong> &mdash; the "Ruptured Duck," worn on the civilian suit to show you'd served</p>
+    </div>
+
+    <p>His qualifications, accumulated over two years on a ship where everyone did everything, were comprehensive: Executive Officer, Commissary Officer, Communication Officer, Gunnery Officer. On a ship with a crew of eighty and a handful of officers, you wore every hat there was to wear.</p>
+
+    <p>He stayed in the Naval Reserve after the war. Monthly meetings, the occasional call-up, the quiet continuation of a commitment he'd made at eighteen. He was promoted to Lieutenant Junior Grade in 1951, to full Lieutenant in 1955, and to Lieutenant Commander in 1959.</p>
+
+    <p>On February 25, 1963, James Garvey Hopkins was honorably discharged from the United States Naval Reserve by Under Secretary of the Navy Paul B. Fay, Jr. He was thirty-nine years old. He had served, in one capacity or another, for twenty-one years.</p>
+
+    <p>He never talked about the medals. He never framed them. He never told his children war stories at bedtime. He just went to work every morning at six and came home every night, and the medals sat in a drawer somewhere, and the log books gathered dust, and the war became the thing that had happened before the rest of his life began.</p>
+
+    <p>It was his son Jim, decades later, who would pull the log books out and sit with his father and read them page by page, coaxing the memories back to the surface like a diver bringing up artifacts from a wreck. And James would listen, and sometimes he would nod, and sometimes he would laugh, and sometimes he would say something so vivid and precise that it was clear the memories had never really been buried at all. They had just been waiting for someone to ask.</p>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART IV: COMING HOME
+     ═══════════════════════════════════════════════════════════════ -->
+
+<section class="volume-divider">
+  <div class="vol-label">Part Four</div>
+  <h2>Coming Home</h2>
+  <div class="gold-rule"></div>
+  <div class="vol-subtitle">Illinois &middot; Michigan &middot; Minnesota &middot; Arizona<br>1946 &mdash; Present</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XV: BECOMING A SURGEON
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; Coming Home</div>
+
+<section class="chapter" id="ch14">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Fourteen</span>
+    <h2 class="chapter-title">Becoming a Surgeon</h2>
+    <p class="chapter-subtitle">Illinois, Michigan, Minnesota, Arizona &mdash; 1946&ndash;1960s</p>
+  </div>
+
+  <div class="body-text">
+    <p>James came home from the Pacific and went back to school with the same methodical determination he'd brought to everything else.</p>
+
+    <p>Northern Illinois University. Then medical school at the University of Illinois. Then the long road of residencies and fellowships &mdash; Hackley Hospital in Muskegon, Michigan. Henry Ford Hospital in Grosse Pointe. The Mayo Clinic, up in Minnesota. Each move was a step up: <em>"You were going upstairs,"</em> Jim explained. <em>"From general surgery to something extraordinary."</em></p>
+
+    <p>The extraordinary thing was thoracic surgery &mdash; operating on the chest, the heart, the great vessels that keep a person alive.</p>
+
+    <p>It was a field that barely existed when James entered it. The technology was primitive. At one of his early hospitals, they didn't even have a heart-lung machine &mdash; the device that takes over the work of the heart and lungs while the surgeon operates.</p>
+
+    <blockquote><p>"They had to make the heart-lung machine in this hospital."</p></blockquote>
+
+    <p>He was the junior resident. His job was to take the machine, make sure it was sterile, cover it, and transport it to the operating room before each surgery.</p>
+
+    <blockquote><p>"Today, everything is already sterile when it comes in the room. But see, we had to make our own machine."</p></blockquote>
+
+    <p>The surgeries were long &mdash; three to four hours was standard for a coronary bypass. He would open the chest, identify the blocked arteries, harvest replacement vessels from the patient's own body &mdash; usually from the leg or the abdomen &mdash; and suture them into place, connecting them above and below the blockage.</p>
+
+    <p>His grandchildren, fascinated, pressed for details. How do you connect the vessels? <em>"You suture them together. You do multiple closures and then tie them."</em> How do you ensure smooth flow? <em>"By doing careful work throughout the whole time. It's the art."</em></p>
+
+    <p>How big are the coronary arteries? He held up his finger. <em>"Big as that."</em></p>
+
+    <p>Did he ever lose someone? He was honest: <em>"Some of them you can't do a thing for. Even though you can put that vessel in, the guy is just too bad all over. He might be good for a couple of months, and then &mdash; bingo."</em></p>
+
+    <p>The work consumed him. He left the house every morning before six and came home late at night. His son Jim, sleeping in the front bedroom of their house on Country Club Drive, would hear the footsteps on the veranda &mdash; the hard tile echoing in the early morning quiet &mdash; and know that his father was already dressed, already prepared, already heading out for a long surgery.</p>
+
+    <blockquote><p>"Every morning about six, six-fifteen, six-thirty, I would hear Grandpa's shoes walking on the veranda. I can remember distinctly hearing his footsteps almost every morning."</p></blockquote>
+
+    <p>How did he relax after a big surgery?</p>
+
+    <blockquote><p>"Well, I wouldn't go out and have a drink, I'll tell you that. No, you'd go home and go to bed."</p></blockquote>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XVI: PAT
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; Coming Home</div>
+
+<section class="chapter" id="ch15">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Fifteen</span>
+    <h2 class="chapter-title">Pat</h2>
+    <p class="chapter-subtitle">St. Luke&rsquo;s Hospital &mdash; 1950s</p>
+  </div>
+
+  <div class="body-text">
+    <p>He met her at St. Luke's.</p>
+
+    <p>She was a nurse. He was in training. They worked in the same hospital, which meant he could find reasons to see her during the day &mdash; walking the halls, checking on patients, making what his family later recognized as tactical visits to wherever Pat happened to be.</p>
+
+    <blockquote><p>"If they knew any nurse in that building, if they were stable &mdash; and maybe even not that &mdash; you talk to them and let's go have a Coke."</p></blockquote>
+
+    <p>Some of the nurses said no. <em>"Don't bother,"</em> they'd tell him.</p>
+
+    <p><em>"Really?"</em> his family asked.</p>
+
+    <p><em>"No, she didn't,"</em> James said quickly of Pat. <em>"But some of them did."</em></p>
+
+    <p>Jim believed they first met at a dance sponsored by the hospital. James allowed that this might have been the case. <em>"Well, that may be the first time. See, because I knew her time after time after time."</em></p>
+
+    <p>The courtship was efficient. Ten to twenty dates, sometimes twice a week. Five to ten weeks. And then he asked her to marry him.</p>
+
+    <blockquote>
+      <p>"Gee, you're kind of a quick decision maker," his family said.</p>
+      <p>"I didn't know I was going to be examined this closely," James replied.</p>
+    </blockquote>
+
+    <p>Patricia Hopkins &mdash; n&eacute;e Pat, always Pat to everyone who knew her &mdash; was everything James was not, and everything he needed. She was social where he was reserved. She was loud where he was quiet. She was confident in the way that people who have never doubted themselves are confident &mdash; not arrogantly, but completely.</p>
+
+    <blockquote><p>"She was afraid of nothing &mdash; just totally could go into any situation and feel confident."</p></blockquote>
+
+    <p>She ran the household. She was the one who made sure the children went to catechism every Saturday morning &mdash; much to Jim's enduring displeasure. (<em>"Saturday morning, you've gone to school every day, and then you want to take off and watch cartoons, and I got to go from eight o'clock till noon to catechism. Are you kidding? I couldn't stand it."</em>) She was the one who dressed the children in suits and ties for every occasion &mdash; church, dinner, photographs, the beach. (<em>"We were always getting dressed up. I hated it."</em>)</p>
+
+    <p>She played the piano by ear, never reading sheet music, just picking out melodies and playing them. She smoked, despite being married to a thoracic surgeon, and no amount of medical expertise could change her mind about it. She was headstrong that way.</p>
+
+    <p>And she threw parties. At the Flynn Lane Biltmore apartments &mdash; 67 North 7th Street, Apartment 109, which the family called "PT Boat 109" to remember the address &mdash; Pat and James became the center of their neighborhood's social life. The record player stacked albums of Herb Alpert and the Tijuana Brass on the automatic changer, and the music played all night, and there was plenty of drinking.</p>
+
+    <p>James, by then, would have a drink socially &mdash; never in excess, but enough to be present. That was Pat's influence. She pulled him into the world.</p>
+
+    <blockquote><p>"Grandma and Grandpa were very popular. Our apartment was quite a spot for the neighborhood."</p></blockquote>
+
+    <p>But they were compatible in the ways that matter. He was the surgeon who left at dawn and came home in the dark. She was the one who kept everything else running &mdash; the children, the house, the social calendar, the emotional architecture of a family. He was the steady flame. She was the warmth that drew people in.</p>
+
+    <blockquote><p>"Grandpa was very lucky to have her as a wife. They were very compatible. They had some good arguments, though."</p></blockquote>
+
+    <p>Jim paused.</p>
+
+    <blockquote><p>"I can't think of a time that I heard Grandpa raise his voice. He's very, very calm. A very kind and gentle person. Grandma was the disciplinarian in our family. She was the executive officer, but he was really in charge. She made you think you were."</p></blockquote>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XVII: FAMILY
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; Coming Home</div>
+
+<section class="chapter" id="ch16">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Sixteen</span>
+    <h2 class="chapter-title">Family</h2>
+    <p class="chapter-subtitle">Tucson, Phoenix &mdash; 1960s&ndash;1980s</p>
+  </div>
+
+  <div class="body-text">
+    <p>The family moved where the work was. Lincoln, Nebraska, for the VA hospital. Dwight, Illinois. Muskegon, Michigan, for Hackley Hospital. Grosse Pointe, for Henry Ford. And then, with baby Mike newly born in 1961, they loaded up the station wagon, hitched the Volkswagen Bug behind it, and drove to Tucson.</p>
+
+    <p>On the way, a pheasant exploded out of a cornfield and hit the windshield. <em>"Guts everywhere,"</em> Jim remembered. <em>"It was terrible."</em></p>
+
+    <p>In Tucson, James worked at the VA hospital and continued his surgical practice. The family lived in a house with a pool, and Grandma Ethelyn and Arthur &mdash; Pat's mother and stepfather &mdash; had bought a house nearby but never moved in.</p>
+
+    <p>James was, in the terminology of his era, a workaholic. He worked six days a week, sometimes seven. He performed one major surgery a day, sometimes more. He had privileges at multiple hospitals &mdash; St. Joseph's, Good Samaritan, Maryvale. He went wherever the patients were.</p>
+
+    <p>But something shifted when Jim started playing football at Brophy Prep. The father who had been a ghost &mdash; always gone, always at the hospital &mdash; suddenly started showing up.</p>
+
+    <blockquote><p>"All of a sudden in high school, when I started playing football and I had games after school, Grandpa all of a sudden started showing up to every single game. It was really kind of cool, because I never would see him prior to that. He was always working. But then he came to every game."</p></blockquote>
+
+    <p>Jim ran hurdles. He won the Prescott Invitational, was named Most Valuable Performer. His father watched from the stands &mdash; the surgeon who operated on hearts for a living, watching his son fly over barriers.</p>
+
+    <p>Mike, the youngest, was born in 1961 &mdash; just before the family's move to Tucson. He would become a Pop Warner quarterback, a would-be decathlete, the one who got the drum set for Christmas and couldn't stop grinning. He was the inspector of his father's model submarines, the quality-control department of a one-man engineering operation.</p>
+
+    <p>Meanwhile, Pat ran the home front with the same competence and confidence she brought to everything. She drove Linda to summer camp at Friendly Pines near Prescott, where Linda rode horses and loved every minute of it. She got Jim to catechism every Saturday for years &mdash; perfect attendance, no exceptions. She dressed the children for church, for dinner, for photographs that they would look at decades later and marvel at how well-turned-out everyone was.</p>
+
+    <p>The family eventually settled in Phoenix. First the Kingswood house &mdash; 10th Street and Bethany Home, with Jim's room and Mike's room sharing a window area and Linda's room on the other side with her own bathroom. Then 37 North Country Club Drive, backing up to the Phoenix Country Club golf course. James built a model submarine that could actually dive, sit on the bottom of the pool, and surface on a timer &mdash; and then fire a snark missile from its nose on a rail. Mike was the inspector.</p>
+
+    <blockquote><p>"Grandpa was a really good model maker."</p></blockquote>
+
+    <p>The family played golf. They went to Lake Powell, where James wasn't too happy about nearly running out of gas on the way up. They went to Yosemite and stayed in a cabin, much to Jim's disappointment &mdash; <em>"I wanted to stay in a tent."</em> They went to Disneyland. Pat took a week-long river raft trip down the Grand Canyon.</p>
+
+    <p>They invested in racehorses. Five doctors and their wives formed a partnership called the Desert Stables, buying horses as a tax write-off. They expected to lose money. Instead, a horse named Hobby Horse Loopy started winning. In his lifetime, Loopy won perhaps a hundred thousand dollars &mdash; serious money in the 1960s.</p>
+
+    <p>Pat, who knew nothing about horse racing, once went to the track and bet on every jockey wearing a green uniform. She was the only one in the group who won any money.</p>
+
+    <blockquote><p>"That's the only reason. If the jockey was wearing a green uniform, I'd bet on him."</p></blockquote>
+
+    <p>Linda grew into a beautiful, capable woman. She loved horses and summer camp at Friendly Pines near Prescott, where the air was cool and the pines smelled like freedom and the days stretched out in that particular way that only summer days at camp can stretch. She was her mother's daughter in confidence and her father's daughter in steadiness.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>It started with the neighbors. Don Daly and his family lived next to the Hopkinses at the Flynn Lane Biltmore apartments, and the Dalys had an airplane. One evening, when Jim was about twelve or thirteen, they all went out to Sky Harbor Airport and flew a four-seat plane over to Deer Valley Airport and back.</p>
+
+    <p>When they returned, in the fading light of a Phoenix evening, James went up for a private lesson. Jim was ecstatic. If his father learned to fly, Jim would get a chance to learn too.</p>
+
+    <p>James took the one lesson. He never went back.</p>
+
+    <blockquote><p>"I was so hoping that he would want to learn. But Grandpa took the one lesson, and that never happened again."</p></blockquote>
+
+    <p>Jim learned to fly anyway, years later. He joined a flying club and served as treasurer for twenty-five years, sharing a single plane with the other members. And then he did what he'd always dreamed of: he flew his father places.</p>
+
+    <p>The longest trip was to Timberon, New Mexico &mdash; a remote community in the Sacramento Mountains where James had bought a piece of land, thinking he might build a cabin. The airstrip was the problem. To get there, Jim had to navigate restricted airspace around the nuclear test sites at White Sands. They flew south to El Paso, then north through a narrow corridor to Alamogordo, and then &mdash; on pure dead reckoning, with no navigation aids, no instruments, nothing but a heading and a clock &mdash; they flew east into the mountains toward a runway they'd never seen.</p>
+
+    <blockquote><p>"All you see is forest. But you know that there's an airport somewhere in this tree mass. And you know you're getting close. And eventually when you see it, it's the length of the runway."</p></blockquote>
+
+    <p>A man came out of the trees.</p>
+
+    <p><em>"Who are you?"</em> he said. <em>"My God! We haven't had a plane land here in a long time. Don't you know it's too narrow?"</em></p>
+
+    <p>They played the same nine holes of golf over and over and had a wonderful time. Mike was with them on that trip.</p>
+
+    <p>They also flew to Durango, Colorado, and rode the narrow-gauge railroad up to Silverton. They flew to the Grand Canyon, where Jim landed on a dirt strip that ended at the lip of a canyon inlet &mdash; <em>"If you run out of airspeed, you're going into the canyon's side."</em> He flew Grandma and Grandpa up for Pat's river raft trip with the Hatch River company.</p>
+
+    <p>James, sitting in the passenger seat of his son's airplane, was always calm.</p>
+
+    <blockquote><p>"He thought you'd be very conscientious and thorough and careful. He's got a mind that's unbelievable."</p></blockquote>
+
+    <p>Flying, Jim believed, taught the same lessons his father had learned in the Navy: discipline, attention to procedure, the understanding that everything you do could be your last effort. Every flight began with a checklist. Every landing began with a plan. And if something went wrong, you didn't panic &mdash; you worked the problem.</p>
+
+    <blockquote><p>"It forces such discipline. You've got your own life in your hand. Everything you do could be your last effort. To me, that was just a challenge. I just love that kind of stuff."</p></blockquote>
+
+    <p>James, who had spent two years on a ship where every action was logged and every decision could mean life or death, understood exactly what his son was talking about.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/IMG_2026_03_22_18_05_11_891.jpg" alt="The Hopkins family at a Spanish mission church">
+      <figcaption>The Hopkins family gathered at Brophy College Preparatory &mdash; the kind of photograph Pat insisted on, everyone dressed and standing straight.</figcaption>
+    </figure>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CHAPTER XVIII: WHAT HE TAUGHT WITHOUT SAYING IT
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; Coming Home</div>
+
+<section class="chapter" id="ch17">
+  <div class="chapter-header">
+    <span class="chapter-number">Chapter Seventeen</span>
+    <h2 class="chapter-title">What He Taught Without Saying It</h2>
+    <p class="chapter-subtitle">A Life in Summary</p>
+  </div>
+
+  <div class="body-text">
+    <p>James Garvey Hopkins was not a man who gave speeches about values. He didn't lecture his children about integrity or discipline or perseverance. He just lived it, and they watched, and it sank in.</p>
+
+    <p>He woke at six and walked the veranda. He operated on hearts for three to four hours at a time, suturing vessels the width of a finger with steady hands. He came home and went to bed. He did it again the next day. He did it for decades.</p>
+
+    <p>He was never a drinker. In his youth and through the war, he didn't touch it at all. Later, he would have a drink socially &mdash; but never in excess. This was not a moral crusade &mdash; he never told anyone else they shouldn't drink. When asked about it, he was matter-of-fact: <em>"There's nothing wrong with that. Just because I never drank is because I didn't want it. I didn't feel it."</em></p>
+
+    <p>But the oath mattered. He had made a promise as a boy, and he carried its spirit as a man &mdash; moderation, discipline, control. There was something in that consistency that told his children and grandchildren everything they needed to know about who he was.</p>
+
+    <p>He was left alone on the ship because he didn't drink, and he said yes because someone had to say yes, and it turned out that saying yes meant an admiral came aboard with a black satchel and the captain said <em>"you did good."</em></p>
+
+    <p>He was practical. He built submarines that worked. He answered questions about surgery with the precision of a man who had spent his career making things function: <em>"You suture them together. You do multiple closures and then tie them. And you always check it out when you're finished."</em></p>
+
+    <p>He was humble. When asked if the surgeries saved lives, he deflected: <em>"You're not saving a life. You're doing what you know you can do."</em></p>
+
+    <p>He was kind. His son never heard him raise his voice. His captain never gave him a hard time. The petty officers kept discipline among the enlisted men, but the officers &mdash; James's world &mdash; ran on competence, not intimidation.</p>
+
+    <blockquote><p>"He wasn't mean. He could have been. Many times. But he didn't."</p></blockquote>
+
+    <p>And he was loyal. To the oath. To the ship. To Pat. To the work. To the family that grew up around him while he was operating or flying or walking the veranda at dawn.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>The decades passed the way decades do when you've already survived the hard part.</p>
+
+    <p>James retired from surgery. He and Pat moved into a care facility as the years accumulated and the body &mdash; even one that had never been abused by excess &mdash; began to slow down. His hearing went first. Then his mobility. His knee bothered him. His foot bothered him.</p>
+
+    <blockquote>
+      <p>"What do you want for Christmas?"</p>
+      <p>"I like the ability to walk normally."</p>
+      <p>"We'll send that one to Santa. You're asking for too much."</p>
+    </blockquote>
+
+    <p>But his mind stayed. That was the remarkable thing. At ninety-eight, he could still hold a conversation, still follow a ship's log entry, still remember the address where he grew up &mdash; <em>"614 South 4th Street"</em> &mdash; though he couldn't remember the name of the petty officer on his ship.</p>
+
+    <p>The family came. Jim came with the grandchildren &mdash; Justin, Jacob, Lily, Daniel, Luke, Chris, and Brian &mdash; and they sat together and read the ship's logs page by page, and James signed the air with his finger the way he'd signed the logs eighty years before, and sometimes he remembered things vividly and sometimes he said <em>"Don't ask me to remember all that,"</em> and sometimes a name or a place would surface suddenly, like a mine rising to the surface of a calm harbor.</p>
+
+    <p>Pat was still there, still beside him &mdash; the nurse from St. Luke's, the girl who'd said yes to a Coke, the woman who'd run an entire household on confidence and piano music and Herb Alpert records.</p>
+
+    <blockquote>
+      <p>"Well, she can hear. Can't you?"</p>
+      <p>"No. You have to shout it."</p>
+      <p>"We've got to get that other ear fixed."</p>
+    </blockquote>
+
+    <p>He was ninety-eight. She was beside him. They were still negotiating.</p>
+
+    <blockquote>
+      <p>"I never visualized that I would ever be close to 100 years old."</p>
+      <p>"You're setting a good example for us."</p>
+    </blockquote>
+
+    <p>When Linda died, the family gathered one more time. They looked at photographs. They talked about the Mustang &mdash; the first-year model that James sold and Jim never forgave him for. They talked about catechism and Friendly Pines and Hobby Horse Loopy and the time Jim tipped the canoe and had to dive to the bottom to find Linda's sunglasses. They talked about the houses &mdash; Lincoln, Dwight, Muskegon, Grosse Pointe, Tucson, Kingswood, Country Club Drive.</p>
+
+    <p>And they talked about the war, because the war was always there, underneath everything &mdash; the reason he became the man he became, the furnace in which the iron was tested and held.</p>
+
+    <blockquote>
+      <p>"Think about it. At twenty years old, you're no longer in charge of your life. The Navy's in charge of your life."</p>
+      <p>"That's correct."</p>
+      <p>"And you just did it. You just did your duty."</p>
+      <p>"That's what it is."</p>
+    </blockquote>
+
+    <figure class="historical-image">
+      <img src="assets/images/pat-young-portrait.jpg" alt="Patricia Nielson as a young woman">
+      <figcaption>Patricia Nielson as a young woman &mdash; the nurse from St. Luke's, the girl who said yes to a Coke, the woman who would run a family with confidence and grace.</figcaption>
+    </figure>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     EPILOGUE
+     ═══════════════════════════════════════════ -->
+
+<div class="running-header">Where the Waves Met the Shore &middot; Epilogue</div>
+
+<section class="chapter" id="epilogue">
+  <div class="chapter-header">
+    <span class="chapter-number">Epilogue</span>
+    <h2 class="chapter-title">Trippingly on the Tongue</h2>
+  </div>
+
+  <div class="body-text">
+    <p>Near the end of one of those long evenings &mdash; the ship's logs put away, the photographs spread across the table, the light fading outside &mdash; someone asked James how he'd like to be remembered.</p>
+
+    <p>He didn't answer directly. He rarely did.</p>
+
+    <p>But earlier that evening, when the family was struggling to hear each other across the room, James had offered his standard advice on communication:</p>
+
+    <blockquote><p>"Speak trippingly on the tongue."</p></blockquote>
+
+    <p>It was Shakespeare &mdash; Hamlet's instruction to the actors &mdash; though James delivered it as if it were Navy regulation. Speak clearly. Speak with purpose. Don't mumble, don't waste words, don't make people guess at what you mean.</p>
+
+    <p>It was, in its way, a perfect summary of how he'd lived: trippingly on the tongue. With clarity. With purpose. With the quiet confidence of a man who had taken an oath as a boy and kept it, who had cleared beaches under fire and never been hit, who had opened a locker for an admiral and kept his mouth shut, who had held human hearts in his hands and sutured them back together, who had sat in his son's airplane and trusted the checklist and the preparation and the steady hand on the controls.</p>
+
+    <p>He was a man of moderation in all things. He didn't smoke. He didn't raise his voice. He walked the veranda at six in the morning and went to work and came home and did it again. For sixty years.</p>
+
+    <div class="section-break">&middot; &middot; &middot;</div>
+
+    <p>The legacy runs in two bloodlines now.</p>
+
+    <p>From the Nielsons: the Danish persistence, the immigrant determination, the house on Clinton Street and the table stretched from the dining room to the living room, the wonderful cooking and the LOUD conversations, the Central Lutheran Church and the Danish Brotherhood and Ellen's father paying for indoor plumbing because his daughter deserved it. From Harold and Bernice: the social worker's compassion, the six children, the move from Michigan to Chicago to Naperville, the faith that carried them through decades of service. And from Bernice, the cruelest inheritance &mdash; the Alzheimer's that took her mind before it took her body, the disease that her grandsons would grow up to fight.</p>
+
+    <p>From the Hopkins: the boy from DeKalb who looked at his father and chose to be different. The oath kept for eighty-five years. The Navy that made him an officer and sent him into the fire. The beaches cleared, the mines destroyed, the typhoons survived. The surgeon's hands, steady enough to suture vessels the width of a finger. The quiet walk on the veranda at six in the morning. The wife who was afraid of nothing. The children dressed in suits and ties. The model submarines that actually worked.</p>
+
+    <p>Linda carried both bloodlines forward. The Nielson persistence and the Hopkins discipline, the Lutheran faith and the surgeon's precision, the Danish cooking and the Navy's attention to detail &mdash; all of it flowed through her to the next generation.</p>
+
+    <p>Her loss brought the family together one more time. And in that gathering &mdash; the photographs spread across the table, the ship's logs read aloud, the stories told and retold until they were burnished smooth &mdash; something was preserved that might otherwise have been lost. Not the facts, which were always in the records. But the feeling. The voice. The particular way James paused before answering a question, as if the answer were a ship that needed to be brought in carefully.</p>
+
+    <blockquote><p>"I made it."</p></blockquote>
+
+    <p>Not about any particular thing &mdash; not about the war or the surgery or the marriage or the ninety-eight years. Just: <em>I made it.</em></p>
+
+    <p>And he did. Against all odds, through all weather, on a ship too small for the ocean and a body too stubborn to quit &mdash; he made it. And he left behind a family who will never stop asking, <em>"What was he like?"</em></p>
+
+    <p>Now they know.</p>
+
+    <figure class="historical-image">
+      <img src="assets/images/IMG_2026_03_22_18_04_49_719.jpg" alt="View across the landscape">
+      <figcaption>The view stretches out across the land &mdash; mountains in the distance, water in the foreground, the long perspective of a life well lived. From Denmark to Michigan, from DeKalb to the Pacific, and all the way home again.</figcaption>
+    </figure>
+  </div>
+
+  <div class="chapter-end"><span class="ornament">&#9670; &#9670; &#9670;</span></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     COLOPHON
+     ═══════════════════════════════════════════ -->
+
+<section class="colophon">
+  <div class="gold-rule thick"></div>
+  <p style="margin-top: 2rem;">
+    Compiled and retold from the <em>Nielson Family History 1795&ndash;2019</em>,<br>
+    ship's logs of the USS LCS(L)(3)-42, NavSource Naval History,<br>
+    the National Personnel Records Center, family recordings<br>
+    and photographs, and the Photography Department<br>
+    of St. Luke's Hospital, Chicago.
+  </p>
+  <div class="gold-rule"></div>
+  <p><em>For the Hopkins and Nielson families &mdash; compiled Easter 2026.</em></p>
+  <div class="gold-rule"></div>
+  <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 2rem;">
+    Set in Playfair Display, Cormorant Garamond, and Source Sans 3.<br>
+    Designed to be read as a book &mdash; cover to cover &mdash;<br>
+    the way family stories are meant to be told.
+  </p>
+  <div class="gold-rule" style="margin-top: 2rem;"></div>
+  <p style="font-size: 0.65rem; opacity: 0.4; margin-top: 1rem;">
+    &copy; 2026
+  </p>
+</section>
+
+</body>
+</html>
